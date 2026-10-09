@@ -86,4 +86,27 @@
 
 ---
 
+## Module 12 — AI Factory Topology, Cabling & Storage (Knowledge)
+**ရည်ရွယ်ချက်** — simulator ထဲ မပါသော D1 theory ဖြည့်ရန် (D1.2, D1.8, D1.11)
+- Compute/Storage/Management fabric; fat-tree, rail-optimized topology
+- DAC/AOC/optical transceiver ရွေးချယ်မှု; signal quality validation
+- Parallel storage architecture; storage test နှင့် data pipeline
+
+## Module 13 — BlueField DPU & MIG (Knowledge)
+**ရည်ရွယ်ချက်** — D2 (5%) အပြည့် (D2.1, D2.2)
+- DPU concept, offload, DOCA platform; BlueField modes of operation
+- MIG hardware partition; configuration command sequence; "enabled ≠ usable" trap
+
+## Module 14 — Control Plane Stack (Knowledge)
+**ရည်ရွယ်ချက်** — D3 (19%) software stack (D3.1-3.7)
+- BCM (+HA), OS/driver install (GPU/DOCA), Slurm + Enroot + Pyxis
+- NVIDIA Container Toolkit (Docker + GPU verify), NGC CLI
+
+## Module 15 — Cluster Test & Verification Deep (Knowledge)
+**ရည်ရွယ်ချက်** — D4 (33%) test တစ်ခုချင်း၏ ရည်ရွယ်ချက် (D4.1-4.14)
+- HPL, NCCL (single-node + E/W), ClusterKit, NeMo burn-in, storage test
+- Cable signal/FW validation; burn-in philosophy
+
+---
+
 **စုစုပေါင်း လေ့လာချိန်** — ၂-၃ ပတ် (တစ်ရက် ၁-၂ နာရီ) သို့မဟုတ် ၁ ပတ် အပြည့် (bootcamp)
