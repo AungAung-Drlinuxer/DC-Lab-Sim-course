@@ -1,4 +1,4 @@
-# Module 10 — 32 Missions Playbook
+# Module 10 — 40 Missions Playbook
 
 ## 1. ပြဿနာ — လက်တွေ့ fault ကို ဘယ်လို လေ့ကျင့်မလဲ
 
@@ -10,7 +10,7 @@ DC Lab Sim ၏ missions များက ဤ ကွာဟချက်ကို fa
 ## 2. Mission စနစ် နားလည်ခြင်း
 
 DC Lab Sim ၏ missions များသည် **story hook + automatic fault injection + inline quiz + debrief**
-ပါဝင်သော guided scenario များ ဖြစ်ပါသည် — စုစုပေါင်း 32 missions, 229 commands။
+ပါဝင်သော guided scenario များ ဖြစ်ပါသည် — စုစုပေါင်း **40 missions** (site v1.6.1 အရ)။ commands အရေအတွက်မှာ landing တွင် 229, Docs > Commands တွင် 214 commands / 17 categories ဟု ဖော်ပြထားပါသည်။ မစ်ရှင် ၄၀ ခု တစ်ခုချင်းစီ၏ အသေးစိတ် playbook ကို **Module 16 — Mission-by-Mission Playbooks** တွင် ကြည့်ပါ။
 
 ```
 Story hook (ဖြစ်ရပ် ဇာတ်လမ်း)  →  fault ကို automatic inject
@@ -104,7 +104,7 @@ Command family တစ်ခုချင်းစီ၏ အဓိပ္ပာယ�
 
 ## Technical review notes
 
-- "32 missions, 229 commands" ဆိုသော အရေအတွက်များသည် DC Lab Sim product အပေါ်
+- "40 missions / 229 commands" ဆိုသော အရေအတွက်များသည် DC Lab Sim product အပေါ်
   မူတည်ပြီး version အလိုက် ပြောင်းလဲနိုင် — needs verification (product update တိုင်းတွင် ပြန်စစ်ပါ)။
 - Self-Check အဖြေ 1 ရှိ Mission vs Sandbox ကွာခြားချက်သည် DC Lab Sim ၏
   feature ဖော်ပြချက်အပေါ် အခြေခံပြီး tool version ပေါ် မူတည် — needs verification။

@@ -71,7 +71,7 @@
 - systematic workflow: gather → hypothesize → test → fix → verify
 - documentation/report (nvidia-bug-report.sh)
 
-## Module 10 — 32 Missions Playbook
+## Module 10 — 40 Missions Playbook
 **ရည်ရွယ်ချက်** — missions အားလုံး ကျွမ်းကျင်စွာ ဖြတ်နိုင်ရန်
 - mission အမျိုးအစားများ (bring-up, validate, troubleshoot, optimize)
 - 229 commands playbook — အသုံးများ command family များ
@@ -103,6 +103,15 @@
 - NVIDIA Container Toolkit (Docker + GPU verify), NGC CLI
 
 ## Module 15 — Cluster Test & Verification Deep (Knowledge)
+
+## Module 16 — Mission-by-Mission Playbooks (40 Missions)
+📁 `16_mission_playbooks/` — မစ်ရှင် ၄၀ ခု တစ်ခုချင်းစီ playbook (story, likely focus, approach, commands, pitfalls)
+
+## Module 17 — Exam Modes, Tool Mastery & Live Incidents
+📁 `17_exam_modes_live_incidents/` — exam modes ၅ မျိုး strategy၊ Tool Mastery quiz families ၇ ခု၊ Live Incidents (scored, skill rating)
+
+## Module 18 — Reference Appendices
+📁 `18_reference_appendices/` — XID Reference (28 codes)၊ Glossary၊ Command Family Reference (214 commands / 17 categories)
 **ရည်ရွယ်ချက်** — D4 (33%) test တစ်ခုချင်း၏ ရည်ရွယ်ချက် (D4.1-4.14)
 - HPL, NCCL (single-node + E/W), ClusterKit, NeMo burn-in, storage test
 - Cable signal/FW validation; burn-in philosophy

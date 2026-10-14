@@ -10,7 +10,7 @@ DC Lab Sim (github.com/Seanbo5386/dc-lab-sim) သည် **ရိုးရာ dat
 တုပဆောက်လုပ်ထားသော simulator** ဖြစ်ပြီး — DGX cluster တစ်ခု၏ terminal, telemetry dashboard,
 fault injection, guided missions များကို **စက်အစစ် မလိုဘဲ** လေ့ကျင့်နိုင်ပါသည်။
 
-- **32 guided missions** (229 commands, story ပါ scenario များ)
+- **40 guided missions** (200+ commands, story ပါ scenario များ) + **Live Incidents** (timed, scored)
 - **6 architecture** — DGX A100 / H100 / H200 / B200 / GB200 / VR200
 - **400+ practice questions** (exam domain weight အလိုက်)
 - **Sandbox** — fault inject → diagnose → remediate (မှတ်မရှိ၊ စိတ်ကြိုက် စမ်းသပ်)
@@ -45,7 +45,7 @@ D3 Control Plane **19%** · D4 Cluster Test & Verification **33%** · D5 Trouble
 📌 NCA-AIIO (associate) က အစိတ်အပိုင်းကို **မှတ်မိရုံ** မေးပါသည်၊ NCP-AII က **တပ်ဆင်ပြီး
 အလုပ်လုပ်ကြောင်း သက်သေပြရန်** မေးပါသည် — ဤ course က ထိုကွာခြားချက်ကို ဖြည့်ပေးပါသည်။
 
-## Course Structure (12 modules)
+## Course Structure (18 modules)
 
 | # | Module | အကြောင်းအရာ | NCP-AII Domain |
 |---|---|---|---|
@@ -59,8 +59,15 @@ D3 Control Plane **19%** · D4 Cluster Test & Verification **33%** · D5 Trouble
 | 07 | BMC & Physical Repair | BMC/OOB/TPM, ipmitool, reseat/RMA | D1 |
 | 08 | Slurm & Workloads | sinfo, workload အမျိုးအစား performance | D4 |
 | 09 | Complex Scenarios | multi-symptom failure ဖြေရှင်းခြင်း | D5 |
-| 10 | Missions Playbook | 32 missions strategy + command playbook | အားလုံး |
+| 10 | Missions Playbook | 40 missions strategy + command playbook | အားလုံး |
 | 11 | Exam Readiness | blueprint map, trap များ, practice plan | အားလုံး |
+| 12 | AI Factory Topology & Storage | topology, cabling, storage (knowledge) | D1, D4 |
+| 13 | BlueField DPU & MIG | DPU offload, MIG partitioning (knowledge) | D1, D4 |
+| 14 | Control Plane Stack | cluster software stack (knowledge) | D3 |
+| 15 | Test & Verification Deep | acceptance testing deep (knowledge) | D4 |
+| 16 | Mission-by-Mission Playbooks | မစ်ရှင် ၄၀ ခု တစ်ခုချင်း playbook | အားလုံး |
+| 17 | Exam Modes & Live Incidents | exam modes ၅ မျိုး + Tool Mastery + Live Incidents | အားလုံး |
+| 18 | Reference Appendices | XID 28 codes, glossary, command families | အားလုံး |
 
 ## အသုံးပြုပုံ
 
