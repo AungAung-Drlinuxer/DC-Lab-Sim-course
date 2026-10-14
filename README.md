@@ -39,6 +39,11 @@ DGX hardware အစစ် မကိုင်ဖူးသော ကျောင�
 | သက်တမ်း | 2 နှစ် |
 | အကြံပြု အတွေ့အကြုံ | datacenter လုပ်ငန်း 2-3 နှစ် (prerequisite မရှိ) |
 
+⚠️ **Exam facts သတိပြုရန်:** dclabsim.com ၏ Exam Guide tab တွင် "50-60 questions,
+90 min, 70% passing, $395" ဟု ဖော်ပြထားပြီး အထက်ပါ ဇယားက အခြား အရင်းအမြစ် အရ —
+နှစ်ခု မတူပါ။ စာမေးပွဲ မတင်မီ **NVIDIA တရားဝင် certification စာမျက်နှာ** တွင်
+လက်ရှိ အချက်အလက်ကို အတည်ပြုပါ (exam format/price များ ပြောင်းလဲနိုင်)။
+
 **Domain ၅ ခု** — D1 Systems & Server Bring-Up **31%** · D2 Physical Layer **5%** ·
 D3 Control Plane **19%** · D4 Cluster Test & Verification **33%** · D5 Troubleshooting & Optimization **12%**
 

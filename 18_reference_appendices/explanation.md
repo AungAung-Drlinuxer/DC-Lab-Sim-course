@@ -277,7 +277,71 @@ man -k gpu            # keyword ဖြင့် man page ရှာ
 - man page ထဲက အချက်အလက်ကို မျက်စိမှိတ် မယုံပါနှင့် — version ကွာပါက behavior ကွဲနိုင်သည်
   (WRITING_RULES နှင့်လည်း ကိုက်ညီ — မသေချာပါက "needs verification")။
 
-## 5. Self-Check
+## Appendix D — Diagnostic Playbooks (4 scenarios)
+
+dclabsim.com Docs > Troubleshooting မှ ဖြတ်လမ်း diagnostic playbooks ၄ ခု —
+symptom ကနေ စစ်ဆေးရမည့် အဆင့် ၅ ဆင့် အထိ အကျဉ်းချုပ် (ပိုမို အသေးစိတ်ကို
+Module 03/05/06/09 တွင် လေ့လာပါ)။
+
+### Scenario A — XID Errors (GPU Faults)
+**Symptoms:** application crash၊ 'GPU fallen off bus'၊ training နှေးခြင်း၊ NCCL timeout
+1. `dmesg | grep -i nvrm` သို့မဟုတ် `journalctl -k | grep -i xid` — XID messages ရှာ
+2. `nvidia-smi -q` ရဲ့ 'GPU Errors' section — ECC counts ကြည့်
+3. `dcgmi diag -r 1` — quick GPU diagnostics
+4. XID code ကို XID Reference (Appendix A) နှင့် တိုက်စစ်
+5. `nvidia-smi -q -d TEMPERATURE` — thermal state စစ်
+
+မှတ်ချက် — site ရဲ့ common-codes စာရင်းတွင် "XID 63 = Row Remapping Failure" ဟု
+ဖော်ပြထားသော်လည်း XID Reference ကိုယ်တိုင်တွင် 63 = Success / 64 = Failure —
+**63 = remap အောင်မြင် (Informational)** ဟု မှတ်ပါ (Module 03 နှင့် ကိုက်ညီ)။
+
+### Scenario B — Thermal Throttling
+**Symptoms:** clocks ကျ (SW Power Cap)၊ fan အသံကျယ်၊ performance ကျ၊ P-state ပြောင်း
+1. `ipmitool sensor list | grep -i temp` — 'Inlet Temp' (< 35°C ဖြစ်သင့်)
+2. `nvidia-smi -q -d TEMPERATURE` — GPU temps (warning > 83°C)
+3. `nvidia-smi` ရဲ့ `Performance State` — P0=max၊ ကြီးလေ ကျလေ
+4. `nvidia-smi -q -d CLOCK` — current vs max clocks
+5. Airflow / vents / fans ရုပ်ပိုင်း စစ်
+
+### Scenario C — NVLink Errors
+**Symptoms:** GPU-to-GPU bandwidth ကျ၊ NCCL allreduce နှေး
+1. `nvidia-smi nvlink -s` — link status ('Active' ဖြစ်သင့်)
+2. `nvidia-smi nvlink -e` — error counts
+3. `dcgmi nvlink -e` — detailed NVLink error counters
+4. `nvidia-smi topo -m` — expected topology နှင့် တိုက်စစ်
+5. ဆက်လက် error တက်ပါက GPU reseat သို့မဟုတ် cable လဲ
+
+### Scenario D — InfiniBand Connectivity
+**Symptoms:** network timeout၊ distributed training နှေး၊ NCCL init fail
+1. `ibstat` — port state ('Active' ဖြစ်သင့်)
+2. `ibstatus` — link width နှင့် speed
+3. `ibdiagnet` — fabric-wide diagnostics
+4. `perfquery` — port error counters
+5. Cable connections / physical damage စစ်
+
+## Appendix E — Official NVIDIA Study Resources
+
+dclabsim.com Docs > Exam Guide မှ ညွှန်းထားသော တရားဝင် အရင်းအမြစ်များ
+(စာမေးပွဲ အတွက် authoritative sources များ):
+
+| အရင်းအမြစ် | ဘာအတွက် |
+|---|---|
+| NCP-AII Certification Page (nvidia.com) | certification overview, registration |
+| NVIDIA Deep Learning Institute (DLI) | official training courses |
+| DGX System Documentation | DGX A100/H100 user guides, admin manuals |
+| Base Command Manager Docs | BCM install/config/admin |
+| DCGM Documentation | GPU health/diagnostics/API |
+| NVIDIA Driver Documentation | CUDA/driver compatibility |
+| NVSM User Guide | fleet management |
+| XID Error Reference (NVIDIA) | XID codes + troubleshooting |
+| NVIDIA Networking (Mellanox) Docs | InfiniBand, ConnectX, BlueField |
+| Slurm Workload Manager docs | config, GRES, GPU scheduling |
+| NVIDIA GPU Operator docs | Kubernetes GPU operator |
+| NCCL Documentation | multi-GPU collectives |
+| MIG User Guide | MIG config/management |
+| IPMI Guide | BMC management protocol |
+
+## Self-Check
 
 1. XID 76 က ဘာကို ဆိုလိုသလဲ၊ severity ဘာလဲ?
 2. Critical severity XID တွေ့ပါက ပထမဆုံး ဘာလုပ်ရမလဲ (Module 03 စည်းမျဉ်း)?
